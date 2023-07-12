@@ -1,0 +1,7 @@
+@import "./variables";
+
+.title {
+  font-family: $listFontFamily;
+  text-shadow: 1px 1px 4px $shadowColor;
+  margin-bottom: 40px;
+}

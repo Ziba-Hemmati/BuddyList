@@ -1,0 +1,26 @@
+@import "./variables";
+@import "./mixin";
+
+.form {
+  input {
+    @include inputStyle();
+    &:focus {
+      color: $inputFocusColor;
+      box-shadow: 1px 1px 4px $shadowColor;
+    }
+  }
+  button {
+    @include inputStyle();
+    padding: 8px;
+    &:active {
+      background-color : $hoverInputBackgroundColor;
+    }
+  }
+  .inputs-container {
+    display: flex;
+    align-items: center;
+  }
+  .search-input {
+    width: 98%;
+  }
+}

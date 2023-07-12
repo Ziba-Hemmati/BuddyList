@@ -1,0 +1,24 @@
+@import "./variables";
+
+@mixin inputStyle {
+  outline: none;
+  border: 1px solid $inputFocusColor;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 8px;
+  background-color: $inputBackgroundColor;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+@mixin listStyle {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  border: 1px solid $inputFocusColor;
+  border-radius: 8px;
+  padding: 10px 50px ;
+  margin: 8px;
+  font-size: 1.1rem;
+  background-color: $inputBackgroundColor;
+}
