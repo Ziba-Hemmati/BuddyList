@@ -1,14 +1,10 @@
 import { useState } from "react";
-import ContactItem from "./ContactItem";
 import "../styles/form.scss";
 
-const Form = () => {
+const Form = ({ list, setList, search, setSearch }) => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  const [list, setList] = useState([]);
-  const [search, setSearch] = useState("");
-
   const nameHandler = (event) => {
     setName(event.target.value);
   };
@@ -76,21 +72,6 @@ const Form = () => {
           className="search-input"
         />
       </form>
-      <ul>
-        {list
-          .filter(({ name }) => name.includes(search))
-          .map(({ id, name, phone, email }) => {
-            return (
-              <ContactItem
-                id={id}
-                name={name}
-                phone={phone}
-                email={email}
-                search={search}
-              />
-            );
-          })}
-      </ul>
     </>
   );
 };
